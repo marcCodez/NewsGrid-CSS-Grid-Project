@@ -1,0 +1,68 @@
+/* Navigation */
+#main-nav .social {
+	display: none;
+}
+
+/* from 3 cols to 1 cols */
+#main-nav .container {
+	grid-template-columns: 1fr;
+	gap: 1.2rem;
+}
+
+#main-nav ul,
+#main {
+	justify-self: center;
+}
+
+#main-nav ul,
+#main-nav .logo {
+	justify-self: center;
+}
+
+#main-nav ul li a {
+	padding: 0.5rem;
+}
+
+/* from 3 to to cols */
+#home-articles .articles-container {
+	grid-template-columns: repeat(2, 1fr);
+}
+/* 
+make first+last article the same as the rest  */
+#home-articles .articles-container > *:first-child,
+#home-articles .articles-container > *:last-child {
+	grid-template-columns: 1fr;
+	grid-column: 1;
+}
+
+/* for mobile devices */
+@media (max-width: 600px) {
+	/* Stack Grid Items */
+	#showcase .showcase-container,
+	#home-articles .articles-container,
+	#main-footer .footer-container {
+		grid-template-columns: 1fr;
+	}
+}
+
+#main-footer .footer-container > *:last-child {
+	grid-column: 1;
+}
+
+/* add border to first and 2nd child */
+#main-footer .footer-container > *:first-child,
+#main-footer .footer-container > *:nth-child(2) {
+	border-bottom: #444 dotted 0.0625rem;
+	padding-bottom: 1rem;
+}
+
+/* stack grid about and article page */
+.page-container {
+	grid-template-columns: 1fr;
+	text-align: center;
+}
+/* 
+remove row span */
+.page-container > *:first-child {
+	grid-row: 1;
+}
