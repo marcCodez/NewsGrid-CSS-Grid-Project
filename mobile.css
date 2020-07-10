@@ -61,8 +61,13 @@ make first+last article the same as the rest  */
 	grid-template-columns: 1fr;
 	text-align: center;
 }
+
 /* 
 remove row span */
 .page-container > *:first-child {
 	grid-row: 1;
+}
+
+.l-heading {
+	font-size: 2rem;
 }
